@@ -1,0 +1,145 @@
+{
+  "info": {
+    "name": "Fuel Route Optimizer",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/health/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "health",
+            ""
+          ]
+        }
+      }
+    },
+    {
+      "name": "Short route (Boston to Philadelphia)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"start_location\": \"Boston, MA\",\n  \"end_location\": \"Philadelphia, PA\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/optimize-route/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "optimize-route",
+            ""
+          ]
+        }
+      }
+    },
+    {
+      "name": "Medium route (Chicago to Miami)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"start_location\": \"Chicago, IL\",\n  \"end_location\": \"Miami, FL\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/optimize-route/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "optimize-route",
+            ""
+          ]
+        }
+      }
+    },
+    {
+      "name": "Long route (New York to Los Angeles)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"start_location\": \"New York, NY\",\n  \"end_location\": \"Los Angeles, CA\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/optimize-route/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "optimize-route",
+            ""
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cheapest stops in Texas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/fuel-stops/?state=TX&limit=10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "fuel-stops",
+            ""
+          ],
+          "query": [
+            {
+              "key": "state",
+              "value": "TX"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
